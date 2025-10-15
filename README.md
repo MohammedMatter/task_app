@@ -1,3 +1,7 @@
+
+> 🚧 **Status:** This project is currently under active development.  
+> Features, UI, and performance are being improved continuously.
+
 # 📝 Task App
 
 A high-performance **task management application** built with **Flutter** using **Clean Architecture (MVVM)**.  
