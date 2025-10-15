@@ -40,11 +40,13 @@ class CategoryDetailsPage extends StatelessWidget {
                       ),
                       onTap: () {
                         showDialog(
+                          
                           barrierDismissible: false,
                           context: context,
                           builder: (context) => AlertDialog(
+                      
                             content: SizedBox(
-                              height: height * 0.25,
+                              height: height * 0.15,
                               child: Column(
                                 children: [
                                   TextField(
@@ -74,7 +76,7 @@ class CategoryDetailsPage extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            title: const Text('Warning'),
+                            title: const Text('Edit Category'),
                             actions: [
                               TextButton(
                                 child: const Text('Done'),

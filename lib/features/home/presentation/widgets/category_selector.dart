@@ -7,7 +7,6 @@ import 'package:task_app/features/home/presentation/view_models/filter_view_mode
 import 'package:task_app/features/home/presentation/view_models/search_view_model.dart';
 import 'package:task_app/features/home/presentation/view_models/task_view_model.dart';
 import 'package:task_app/features/home/presentation/view_models/theme_view_model.dart';
-
 import 'package:task_app/features/home/presentation/views/widgets/circle_avatar.dart';
 import 'package:task_app/core/widgets/text_field_style.dart';
 
@@ -15,12 +14,14 @@ import 'package:task_app/core/widgets/text_field_style.dart';
 class CategorySelector extends StatelessWidget {
   TextEditingController categoryNameController = TextEditingController();
   TextEditingController categorydescriptionController = TextEditingController();
-  CategorySelector({
-    super.key,
-  });
+  CategorySelector({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final height = size.height;
+    final width = size.width;
+
     return Consumer5<CategoryViewModel, SearchViewModel, TaskViewModel,
         FilterViewModel, ThemeViewModel>(
       builder: (context, prov, provSearchViewModel, provTaskViewModel,
@@ -30,7 +31,7 @@ class CategorySelector extends StatelessWidget {
         children: [
           Expanded(
             child: SizedBox(
-                height: 50,
+                height: height * 0.06,
                 child: provFilterViewModel.searchType.name == 'category' &&
                         prov.categories.any(
                           (element) {
@@ -46,14 +47,14 @@ class CategorySelector extends StatelessWidget {
                             onTap: () {
                               prov.selectCategory(
                                   provSearchViewModel.taskCategory);
-
                               Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => CategoryDetailsPage(),
                               ));
                             },
                             child: Card(
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30),
+                                borderRadius:
+                                    BorderRadius.circular(width * 0.08),
                               ),
                               color: prov.categories
                                   .firstWhereOrNull(
@@ -65,19 +66,21 @@ class CategorySelector extends StatelessWidget {
                                   )
                                   ?.color,
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 20, vertical: 10),
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: width * 0.05,
+                                  vertical: height * 0.012,
+                                ),
                                 child: Center(
-                                    child: Text(
-                                  provSearchViewModel.taskCategory.trim(),
-                                  style: const TextStyle(color: Colors.white),
-                                )),
+                                  child: Text(
+                                    provSearchViewModel.taskCategory.trim(),
+                                    style:
+                                        TextStyle(color: Colors.white, fontSize: width * 0.035),
+                                  ),
+                                ),
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            width: 10,
-                          ),
+                          SizedBox(width: width * 0.02),
                         ],
                       )
                     : ListView.builder(
@@ -96,17 +99,23 @@ class CategorySelector extends StatelessWidget {
                               child: Card(
                                 elevation: 3,
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30),
+                                  borderRadius:
+                                      BorderRadius.circular(width * 0.08),
                                 ),
                                 color: prov.categories[index].color,
                                 child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 20, vertical: 10),
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: width * 0.05,
+                                    vertical: height * 0.012,
+                                  ),
                                   child: Center(
-                                      child: Text(
-                                    prov.categories[index].name!,
-                                    style: const TextStyle(color: Colors.white),
-                                  )),
+                                    child: Text(
+                                      prov.categories[index].name!,
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: width * 0.035),
+                                    ),
+                                  ),
                                 ),
                               ),
                             );
@@ -120,33 +129,37 @@ class CategorySelector extends StatelessWidget {
                                 elevation: 2,
                                 shape: RoundedRectangleBorder(
                                   side: BorderSide(
-                                      width: 0.8,
-                                      color: Color.fromARGB(255, 14, 113, 179)),
-                                  borderRadius: BorderRadius.circular(30),
+                                    width: width * 0.002,
+                                    color: const Color.fromARGB(
+                                        255, 14, 113, 179),
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.circular(width * 0.08),
                                 ),
                                 color:
                                     Theme.of(context).scaffoldBackgroundColor,
-                                child: const Padding(
+                                child: Padding(
                                   padding: EdgeInsets.symmetric(
-                                    horizontal: 10,
+                                    horizontal: width * 0.025,
                                   ),
                                   child: Center(
-                                      child: Row(
-                                    children: [
-                                      Icon(Icons.add,
-                                          color: Color.fromARGB(
-                                              255, 14, 113, 179)),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Text(
-                                        'Add Category',
-                                        style: TextStyle(
-                                            color: Color.fromARGB(
-                                                255, 14, 113, 179)),
-                                      ),
-                                    ],
-                                  )),
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.add,
+                                            color: const Color.fromARGB(
+                                                255, 14, 113, 179),
+                                            size: width * 0.045),
+                                        SizedBox(width: width * 0.01),
+                                        Text(
+                                          'Add Category',
+                                          style: TextStyle(
+                                              color: const Color.fromARGB(
+                                                  255, 14, 113, 179),
+                                              fontSize: width * 0.035),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                 ),
                               ),
                             );
@@ -163,6 +176,10 @@ class CategorySelector extends StatelessWidget {
 
   void showModalBottomSheetMethod(
       BuildContext context, CategoryViewModel prov) {
+    final size = MediaQuery.of(context).size;
+    final height = size.height;
+    final width = size.width;
+
     showModalBottomSheet(
       isScrollControlled: true,
       context: context,
@@ -180,10 +197,10 @@ class CategorySelector extends StatelessWidget {
                   topRight: Radius.circular(15),
                 ),
               ),
-              height: MediaQuery.of(context).size.height * 0.35,
+              height: height * 0.35,
               width: double.infinity,
               child: Padding(
-                padding: const EdgeInsets.all(12.0),
+                padding: EdgeInsets.all(width * 0.03),
                 child: Column(
                   children: [
                     Column(
@@ -201,9 +218,9 @@ class CategorySelector extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Align(
+                    Padding(
+                      padding: EdgeInsets.all(width * 0.02),
+                      child: const Align(
                         alignment: Alignment.centerLeft,
                         child: Text('Select Color'),
                       ),
@@ -211,61 +228,62 @@ class CategorySelector extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        const SizedBox(width: 25),
+                        SizedBox(width: width * 0.05),
                         CircleAvatarStyle(
-                          radius: 15,
+                          radius: width * 0.04,
                           method: () => prov.selectColor(Colors.red),
                           isSelected: prov.selectedColor == Colors.red,
                           color: Colors.red,
                         ),
                         CircleAvatarStyle(
-                          radius: 15,
+                          radius: width * 0.04,
                           method: () => prov.selectColor(Colors.green),
                           isSelected: prov.selectedColor == Colors.green,
                           color: Colors.green,
                         ),
                         CircleAvatarStyle(
-                          radius: 15,
+                          radius: width * 0.04,
                           method: () => prov.selectColor(Colors.blue),
                           isSelected: prov.selectedColor == Colors.blue,
                           color: Colors.blue,
                         ),
                         CircleAvatarStyle(
-                          radius: 15,
+                          radius: width * 0.04,
                           method: () => prov.selectColor(Colors.orange),
                           isSelected: prov.selectedColor == Colors.orange,
                           color: Colors.orange,
                         ),
                         CircleAvatarStyle(
-                          radius: 15,
+                          radius: width * 0.04,
                           method: () => prov.selectColor(Colors.purple),
                           isSelected: prov.selectedColor == Colors.purple,
                           color: Colors.purple,
                         ),
                         CircleAvatarStyle(
-                          radius: 15,
+                          radius: width * 0.04,
                           method: () => prov.selectColor(
                               const Color.fromARGB(255, 11, 65, 39)),
                           isSelected: prov.selectedColor ==
                               const Color.fromARGB(255, 11, 65, 39),
                           color: const Color.fromARGB(255, 11, 65, 39),
                         ),
-                        const SizedBox(width: 25),
+                        SizedBox(width: width * 0.05),
                       ],
                     ),
-                    const SizedBox(height: 15),
+                    SizedBox(height: height * 0.02),
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
-                          minimumSize: const WidgetStatePropertyAll(
-                              Size(double.infinity, 20)),
+                          minimumSize: WidgetStatePropertyAll(
+                              Size(double.infinity, height * 0.05)),
                           foregroundColor:
                               const WidgetStatePropertyAll(Colors.white),
                           backgroundColor: const WidgetStatePropertyAll(
                               Color.fromARGB(255, 14, 113, 179)),
                           shape: WidgetStatePropertyAll(
                             RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
+                              borderRadius:
+                                  BorderRadius.circular(width * 0.04),
                             ),
                           ),
                         ),
@@ -277,9 +295,10 @@ class CategorySelector extends StatelessWidget {
                               context: context,
                               builder: (context) {
                                 return AlertDialog(
-                                  title: const Text(
+                                  title: Text(
                                     'Missing Information',
-                                    style: TextStyle(fontSize: 20),
+                                    style:
+                                        TextStyle(fontSize: width * 0.05),
                                   ),
                                   content: const Text(
                                       'Please enter both category name and description before saving'),
@@ -322,9 +341,10 @@ class CategorySelector extends StatelessWidget {
                                 barrierDismissible: false,
                                 context: context,
                                 builder: (context) => AlertDialog(
-                                  title: const Text(
+                                  title: Text(
                                     'Duplicate Category',
-                                    style: TextStyle(fontSize: 20),
+                                    style:
+                                        TextStyle(fontSize: width * 0.05),
                                   ),
                                   content: const Text(
                                       'You already have a category with this name. Please choose a different name'),
