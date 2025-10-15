@@ -1,19 +1,26 @@
-# Task App
+# 📝 Task App
 
-A modern Flutter Task Management App following MVVM and Clean Architecture principles.  
-Features task scheduling, category management, local notifications, and Firebase sync.
+A high-performance **task management application** built with **Flutter** using **Clean Architecture (MVVM)**.  
+It helps users organize, categorize, and track their daily tasks with real-time **Firebase sync**, **smart reminders**, and a modern responsive design.
 
 ---
 
-## Getting Started
+## 🚀 Features
+- ✅ Add, edit, and delete tasks.
+- 📂 Categorize tasks by type or priority.
+- 🔔 Smart local notifications and daily reminders.
+- ☁️ Firebase synchronization for backup and multi-device support.
+- 🌙 Light & Dark mode themes.
+- 💡 Built with Clean Architecture & MVVM pattern for scalability.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🧰 Tech Stack
+- **Framework:** Flutter (Dart)
+- **Architecture:** Clean Architecture + MVVM
+- **State Management:** Provider / ChangeNotifier
+- **Backend:** Firebase (Auth, Firestore)
+- **Storage:** flutter_secure_storage
+- **Notifications:** flutter_local_notifications
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
