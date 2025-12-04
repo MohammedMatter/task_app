@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/features/home/presentation/pages/notifications_screen.dart';
+import 'package:task_app/features/home/presentation/view/notifications_screen.dart';
 
-import 'package:task_app/features/home/presentation/views/widgets/home.body.dart';
-import 'package:task_app/features/home/presentation/views/widgets/seetings_body.dart';
-import 'package:task_app/features/home/presentation/views/widgets/tasks_pages.dart';
+import 'package:task_app/features/home/presentation/widgets/home.body.dart';
+import 'package:task_app/features/home/presentation/widgets/seetings_body.dart';
+import 'package:task_app/features/home/presentation/widgets/tasks_pages.dart';
 
 abstract class AppPages {
   static List bottomNavPages = [

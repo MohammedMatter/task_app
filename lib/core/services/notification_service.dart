@@ -7,7 +7,6 @@ class NotificationService {
   static final FlutterLocalNotificationsPlugin _notification =
       FlutterLocalNotificationsPlugin();
   static Future<void> init() async {
-
     if (await Permission.notification.isDenied) {
       await Permission.notification.request();
     }
@@ -23,7 +22,7 @@ class NotificationService {
       required String title,
       required String body,
       required DateTime date}) async {
-        log('${id}') ; 
+    log('${id}');
     if (date.isBefore(DateTime.now())) {
       date = DateTime.now().add(Duration(seconds: 30));
     }
@@ -48,8 +47,6 @@ class NotificationService {
   static Future<void> cancelScheduleNotification({
     required int id,
   }) async {
-    
- 
     await _notification.cancel(id);
   }
 }

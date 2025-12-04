@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:task_app/features/home/data/models/task.dart';
 import 'package:task_app/features/home/presentation/view_models/category_view_model.dart';
 import 'package:task_app/features/home/presentation/view_models/task_view_model.dart';
-import 'package:task_app/features/home/presentation/views/widgets/detalis_category_body.dart';
+import 'package:task_app/features/home/presentation/widgets/detalis_category_body.dart';
 
 // ignore: must_be_immutable
 class CategoryDetailsPage extends StatelessWidget {

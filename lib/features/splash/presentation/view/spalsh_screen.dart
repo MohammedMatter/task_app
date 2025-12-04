@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/core/services/splash_animation_manager.dart';
 
-import 'package:task_app/features/splash/presentation/views/widgets/splash_body.dart';
+import 'package:task_app/features/splash/presentation/widgets/splash_body.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 

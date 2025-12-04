@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_app/features/home/presentation/view_models/task_view_model.dart';
-import 'package:task_app/features/home/presentation/views/widgets/dismissible_task_item.dart';
+import 'package:task_app/features/home/presentation/widgets/dismissible_task_item.dart';
 
 class TasksPages extends StatelessWidget {
   const TasksPages({super.key});

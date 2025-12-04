@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/features/auth/presentation/pages/sign_in_screen.dart';
+import 'package:task_app/features/auth/presentation/view/sign_in_screen.dart';
 class SplashAnimationManager {
   final TickerProvider vsync;
   AnimationController animationController;

@@ -4,11 +4,11 @@ import 'package:task_app/features/home/presentation/view_models/category_view_mo
 import 'package:task_app/features/home/presentation/view_models/filter_view_model.dart';
 import 'package:task_app/features/home/presentation/view_models/search_view_model.dart';
 import 'package:task_app/features/home/presentation/view_models/task_view_model.dart';
-import 'package:task_app/features/home/presentation/views/widgets/bg_profile.dart';
-import 'package:task_app/features/home/presentation/views/widgets/category_selector.dart';
-import 'package:task_app/features/home/presentation/views/widgets/dismissible_task_item.dart';
-import 'package:task_app/features/home/presentation/views/widgets/greeting_widget.dart';
-import 'package:task_app/features/home/presentation/views/widgets/search_task.dart';
+import 'package:task_app/features/home/presentation/widgets/bg_profile.dart';
+import 'package:task_app/features/home/presentation/widgets/category_selector.dart';
+import 'package:task_app/features/home/presentation/widgets/dismissible_task_item.dart';
+import 'package:task_app/features/home/presentation/widgets/greeting_widget.dart';
+import 'package:task_app/features/home/presentation/widgets/search_task.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({

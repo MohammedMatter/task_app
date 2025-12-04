@@ -6,7 +6,7 @@ import 'package:task_app/features/home/presentation/view_models/category_view_mo
 import 'package:task_app/features/home/presentation/view_models/notification_view_model.dart';
 import 'package:task_app/features/home/presentation/view_models/task_view_model.dart';
 import 'package:task_app/features/home/presentation/view_models/theme_view_model.dart';
-import 'package:task_app/features/home/presentation/views/widgets/custom_bottom_sheet.dart';
+import 'package:task_app/features/home/presentation/widgets/custom_bottom_sheet.dart';
 import 'package:task_app/features/user/presentation/view_models/user_view_model.dart';
 
 int? indexGlobal = 0;

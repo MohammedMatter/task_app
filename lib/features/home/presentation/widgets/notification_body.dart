@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_app/features/home/presentation/view_models/notification_view_model.dart';
-import 'package:task_app/features/home/presentation/views/widgets/dismussible_notification.dart';
+import 'package:task_app/features/home/presentation/widgets/dismussible_notification.dart';
 
 class NotificationsBody extends StatefulWidget {
   const NotificationsBody({

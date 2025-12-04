@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:task_app/features/auth/presentation/view_models/auth_view_model.dart';
-import 'package:task_app/features/auth/presentation/pages/sign_in_screen.dart';
-import 'package:task_app/features/home/presentation/pages/update_password.dart';
+import 'package:task_app/features/auth/presentation/view/sign_in_screen.dart';
+import 'package:task_app/features/home/presentation/view/update_password.dart';
 import 'package:task_app/features/home/presentation/view_models/setting_view_model.dart';
 import 'package:task_app/features/home/presentation/view_models/theme_view_model.dart';
-import 'package:task_app/features/home/presentation/views/widgets/about_app_body.dart';
+import 'package:task_app/features/home/presentation/widgets/about_app_body.dart';
 import 'package:task_app/features/user/presentation/view_models/user_view_model.dart';
-import 'package:task_app/features/home/presentation/views/widgets/bg_profile.dart';
-import 'package:task_app/features/home/presentation/views/widgets/list_tile_settings.dart';
+import 'package:task_app/features/home/presentation/widgets/bg_profile.dart';
+import 'package:task_app/features/home/presentation/widgets/list_tile_settings.dart';
 
 class SettingsBody extends StatelessWidget {
   const SettingsBody({super.key});
@@ -101,7 +101,7 @@ class SettingsBody extends StatelessWidget {
                 SizedBox(
                   width: width * 0.9,
                   height: !provUserViewMidel.user!.isGoogleSignedIn!
-                      ? height * 0.45
+                      ? height * 0.32
                       : height * 0.28,
                   child: Card(
                     shape: RoundedRectangleBorder(
@@ -109,7 +109,7 @@ class SettingsBody extends StatelessWidget {
                     ),
                     elevation: 8,
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    
                       children: [
                         if (!provUserViewMidel.user!.isGoogleSignedIn!)
                           InkWell(

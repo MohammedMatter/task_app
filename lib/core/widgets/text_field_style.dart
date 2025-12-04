@@ -50,7 +50,7 @@ class TextFormFieldStyle extends StatelessWidget {
             prefixIcon: icon,
             hintText: hint,
             contentPadding: EdgeInsets.symmetric(
-              vertical: height * 0.02,
+              vertical: height * 0.01,
               horizontal: width * 0.03,
             ),
             enabledBorder: OutlineInputBorder(

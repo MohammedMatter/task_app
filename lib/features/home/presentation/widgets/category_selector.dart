@@ -1,13 +1,13 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:task_app/features/home/presentation/pages/details_category_screen.dart';
+import 'package:task_app/features/home/presentation/view/details_category_screen.dart';
 import 'package:task_app/features/home/presentation/view_models/category_view_model.dart';
 import 'package:task_app/features/home/presentation/view_models/filter_view_model.dart';
 import 'package:task_app/features/home/presentation/view_models/search_view_model.dart';
 import 'package:task_app/features/home/presentation/view_models/task_view_model.dart';
 import 'package:task_app/features/home/presentation/view_models/theme_view_model.dart';
-import 'package:task_app/features/home/presentation/views/widgets/circle_avatar.dart';
+import 'package:task_app/features/home/presentation/widgets/circle_avatar.dart';
 import 'package:task_app/core/widgets/text_field_style.dart';
 
 // ignore: must_be_immutable

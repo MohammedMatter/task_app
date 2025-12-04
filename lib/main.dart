@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:task_app/core/routes/app_routes.dart';
 import 'package:task_app/core/services/network_manager.dart';
 import 'package:task_app/features/home/data/respositories_impl/notification_repository_impl.dart';
-import 'package:task_app/features/home/presentation/pages/home_screen.dart';
+import 'package:task_app/features/home/presentation/view/home_screen.dart';
 import 'package:task_app/features/home/presentation/view_models/setting_view_model.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:task_app/core/services/notification_service.dart';
@@ -26,10 +26,10 @@ import 'package:task_app/features/home/presentation/view_models/task_view_model.
 import 'package:task_app/features/home/presentation/view_models/theme_view_model.dart';
 import 'package:task_app/features/user/presentation/view_models/user_view_model.dart';
 
-import 'package:task_app/features/auth/presentation/pages/sign_in_screen.dart';
+import 'package:task_app/features/auth/presentation/view/sign_in_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:task_app/features/auth/presentation/pages/sign_up_screen.dart';
-import 'package:task_app/features/splash/presentation/pages/spalsh_screen.dart';
+import 'package:task_app/features/auth/presentation/view/sign_up_screen.dart';
+import 'package:task_app/features/splash/presentation/view/spalsh_screen.dart';
 import 'package:task_app/firebase_options.dart';
 
 void main() async {

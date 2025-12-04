@@ -268,7 +268,7 @@ class detailsTask extends StatelessWidget {
                                     Navigator.of(context).pop();
                                     provNotificationViewModel.sendNotification(
                                         task, task.date);
-                                  },
+                                  } , 
                                   child: Text('save',
                                       style: TextStyle(
                                           fontSize: width * 0.035)),
@@ -350,6 +350,7 @@ class detailsTask extends StatelessWidget {
                           TextSpan(
                             text: task.description,
                             style: TextStyle(
+                              fontFamily: 'Roboto',
                               color: provThemeViewModel.nightThemeEnabled
                                   ? Colors.white
                                   : Colors.black,

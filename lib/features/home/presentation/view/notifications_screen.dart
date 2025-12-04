@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/features/home/presentation/views/widgets/notification_body.dart';
+import 'package:task_app/features/home/presentation/widgets/notification_body.dart';
 
 class NotificationsScreen extends StatelessWidget {
   const NotificationsScreen({super.key});
